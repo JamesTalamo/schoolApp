@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDENT DASHBOARD</title>
+    <link rel="stylesheet" href="../studentDash/studentDash.css">
+</head>
+<body>
+
+   <div class="template">
+
+        <div id="burger-menu" onclick="
+        if(document.querySelector('#purple-nav').style.display==='none'){
+            document.querySelector('#purple-nav').style.display='block'
+        }else{
+            document.querySelector('#purple-nav').style.display='none'
+        }"></div>
+
+        <div id="purple-nav">
+
+            <div id="x-button" onclick="if(document.querySelector('#purple-nav').style.display==='none'){
+                document.querySelector('#purple-nav').style.display='block'
+            }else{
+                document.querySelector('#purple-nav').style.display='none'
+            }"></div>
+
+            <div id="name-holder"><!--DYNAMIC--></div>
+            <div id="name-roles"><!--DYNAMIC--></div>
+
+            <div id="navigation">
+                <ul>
+                    <li tabindex="0" onclick="window.location.href='http://localhost:4000/verifiedRoutes/studentDash/dash'"><img src="../assetsFrontEnd/navIcon1.svg" class="navIcons">DASHBOARD</li>
+                    <li tabindex="0" onclick="window.location.href='http://localhost:4000/verifiedRoutes/studentDash/user'"><img src="../assetsFrontEnd/navIcon2.svg" class="navIcons">USER</li>
+                </ul>
+            </div>
+
+            <div id="logoutButton">LOGOUT</div>
+        </div>
+        <div class="container">
+            
+        </div>
+   </div>
+
+
+</body>
+<script src="../studentDash/studentDash.js"></script>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEACHER DASHBOARD</title>
+    <link rel="stylesheet" href="../../teacherDash-students/teacherDash-students.css">
+</head>
+
+<body>
+
+    <div class="template">
+
+        <div id="burger-menu" onclick="
+        if(document.querySelector('#purple-nav').style.display==='none'){
+            document.querySelector('#purple-nav').style.display='block'
+        }else{
+            document.querySelector('#purple-nav').style.display='none'
+        }"></div>
+
+        <div id="purple-nav">
+
+            <div id="x-button" onclick="if(document.querySelector('#purple-nav').style.display==='none'){
+                document.querySelector('#purple-nav').style.display='block'
+            }else{
+                document.querySelector('#purple-nav').style.display='none'
+            }"></div>
+
+            <div id="name-holder"><!--DYNAMIC--></div>
+            <div id="name-roles"><!--DYNAMIC--></div>
+
+            <div id="navigation">
+                <ul>
+                    <li tabindex="0"
+                        onclick="window.location.href = 'http://localhost:4000/verifiedRoutes/teacherDash/students'">
+                        <img src="../../assetsFrontEnd/navIcon3.svg" class="navIcons">STUDENTS
+                    </li>
+
+                    <li tabindex="0"
+                        onclick="window.location.href = 'http://localhost:4000/verifiedRoutes/teacherDash/work'"><img
+                            src="../../assetsFrontEnd/navIcon4.svg" class="navIcons">ADD NEW WORK
+                    </li>
+
+                    <li tabindex="0"
+                        onclick="window.location.href = 'http://localhost:4000/verifiedRoutes/teacherDash/workC'"><img
+                            src="../../assetsFrontEnd/navIcon6.svg" class="navIcons">CURRENT WORK
+                    </li>
+
+                    <li tabindex="0"
+                        onclick="window.location.href = 'http://localhost:4000/verifiedRoutes/teacherDash/user'"><img
+                            src="../../assetsFrontEnd/navIcon2.svg" class="navIcons">USER
+                    </li>
+                </ul>
+            </div>
+            <div id="logoutButton">LOGOUT</div>
+        </div>
+        <div class="container">
+            <div class="container">
+
+                <div id="info-box">
+                    <div id="top-text">
+                        <ul>
+                            <li>Name</li>
+                            <li>Date created</li>
+                            <li>Role</li>
+                            <li>Score</li>
+                        </ul>
+                    </div>
+
+                    <div id="names-list">
+                        <ul id="new-stud-con">
+                            <!-- DYNAMICALLY ADDED THE STUDENTS-->
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script src="../../teacherDash-students/teacherDash-students.js"></script>
+
+</html>

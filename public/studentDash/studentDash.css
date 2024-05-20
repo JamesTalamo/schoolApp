@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root{
+    --bg :#F3F4FF;
+    --purple :#4D44B5;
+}
+
+*{
+    padding:0;
+    margin:0;
+    font-family: 'Poppins';
+}
+
+body{
+    padding:0;
+    margin:0;
+}
+
+
+.template{ 
+    height: 100vh;
+    width: 100vw;
+    background-color:var(--bg);
+}
+
+.container {
+    background-color: var(--bg);
+    position:relative;
+
+  height: 100vh;
+  max-width: 1536px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+ 
+}
+
+#purple-nav{
+    background-color: var(--purple);
+    height: 100%;
+    position:absolute;
+    left:0%;
+    width: 300px;
+    z-index: 5;
+}
+#name-holder{
+    text-align: center;
+    width: 80%;
+
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    top:5%;
+
+    color:white;
+    font-size: 25px;
+    font-weight: 900;
+}
+
+#name-roles{
+    text-align: center;
+    width: 80%;
+
+    position:absolute;
+    left:50%;
+    transform:translateX(-50%);
+    top:10%;
+
+    color:white;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+#navigation {
+    position:absolute;
+    top:50%;
+    transform: translateY(-50%);
+
+    height: 600px;
+    width: 100%;
+    background-color: transparent;
+}
+
+#navigation ul {
+    display:flex;
+    flex-direction: column;
+
+    gap:0rem; /*REMOVE THIS GAP IN PRODUCTION*/
+
+    list-style: none;
+    
+}
+
+#navigation ul li {
+    
+    margin-left:10%;
+    width: 90%;
+    background-color: var(--bg);
+    height: 50px;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 18px;
+    color:var(--bg);
+    background-color: transparent;
+
+    position:relative;
+
+    cursor: pointer;
+}
+
+#navigation ul li:focus{
+    background-color: var(--bg);
+    color:var(--purple);
+}
+
+
+
+.navIcons{
+    position:absolute;
+    left:5%;
+    top:50%;
+    transform: translateY(-50%);
+
+}
+
+#logoutButton {
+
+  position: absolute;
+  bottom: 10%;
+
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 25px;
+
+  height: 50px;
+  width: 80%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  font-size: 15px;
+  font-weight: 800;
+  color: var(--purple);
+}
+
+#burger-menu{      /*---------------------*/
+  position:absolute;
+  background-color: transparent;
+  height: 50px;
+  width: 50px;
+
+  z-index: 5;
+
+  left: 5%;
+  top:5%;
+  background-image: url(../assetsFrontEnd//burgerMenu.svg);
+  cursor: pointer;
+
+  display: block;
+}
+
+#x-button{ /*---------------------*/
+  right:0;
+  position:absolute;
+  height: 50px;
+  width: 50px;
+  background-color: transparent;
+  background-image: url(../assetsFrontEnd//burgerMenu.svg);
+  cursor: pointer;
+}
+
+
+/* 2xl */
+@media (max-width: 1536px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+/* xl */
+@media (max-width: 1280px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+/* lg */
+@media (max-width: 1024px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+/* md */
+@media (max-width: 768px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+/* sm */
+@media (max-width: 640px) {
+  .container {
+    max-width: 475px;
+  }
+}
+
+/* xs */
+@media (max-width: 475px) {
+  .container {
+    width: 100%;
+  }
+}

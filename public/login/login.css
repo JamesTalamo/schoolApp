@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+:root{
+    --pink :#FFB1B7;
+    --black :#202020;
+    --purple :#4D44B5;
+}
+
+*{
+    padding :0;
+    margin:0;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.template {
+    width: 100vw;
+    height: 100%;
+    background-color: white;
+}
+
+.container {
+    background-color: white;
+
+    max-width: 1536px;
+    height: 100vh;
+
+
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    position:relative;
+  }
+
+
+  #pink-left{
+    width: 700px;
+    height: 100vh;
+    background-color: var(--purple);
+    position:absolute;
+    z-index:2;
+
+  }
+
+  #pink-left-img{
+    width: 50px;
+    height: 50px;
+    position:absolute;
+    left:6%;
+    top:5.5%;
+  }
+
+  #pink-left-text{
+    position:absolute;
+
+    font-family: 'Inter';
+    font-weight: 600;
+    color:#FFFFFF;
+    font-size: 30px;
+    top:6%;
+    left:15%;
+  }
+
+  #pink-left-bot-text{
+    position:absolute;
+
+    font-family: 'Inter';
+    font-weight: 700;
+    color:#FFFFFF;
+    font-size: 50px;
+
+    bottom:5%;
+    left:5%;
+  }
+
+  #sign-in-box{
+    width: 500px;
+    height: 500px;
+    background-color: transparent;
+    position:absolute;
+    right:15%;
+    top:50%;
+    transform: translateY(-50%);
+    padding:20px;
+  }
+
+  #sign-in-box-1{
+    position:absolute;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Inter';
+  }
+
+    .sign-in-input-box{
+        position:absolute;
+        width: 500px;
+        height: 50px;
+        border: 1px solid lightgrey;
+        border-radius:10px;
+
+        font-size: 14px;
+        font-family: 'Inter';
+        text-indent: 5%;
+  }
+  #username{
+    top:15%;
+  }
+
+  #password{
+    top:30%;
+  }
+
+  #sign-in-box-4{
+    position:absolute;
+    top:50%;
+
+    font-size: 14px;
+    color:var(--black);
+    font-family: 'Inter';
+    cursor:pointer;
+  }
+
+  #sign-in-box-5{
+    position:absolute;
+    top:50%;
+    right:23%;
+
+    font-size: 14px;
+    color:var(--black);
+    font-family: 'Inter';
+  }
+
+  #sign-in-link{
+    position:absolute;
+    right: -40%;
+    top:0%;
+    cursor: pointer;
+
+    font-size: 14px;
+    font-family: 'Inter';
+    font-weight: 600;
+    color:var(--purple);
+  }
+
+  .sign-in-button{
+    position:absolute;
+    top:60%;
+    border-radius: 10px;
+    border: none;
+    background-color: #775DA6;
+
+    font-family: 'Inter';
+    font-size: 14px;
+    font-weight: 600;
+    color:#FFFFFF;
+    cursor: pointer;
+
+    width: 500px;
+    height: 50px;
+  }
+
+  .spacer{
+    position:absolute;
+    top:75%;
+
+    height: 1px;
+    width: 500px;
+    background-color: lightgrey;
+  }
+
+  .sign-in-gf{
+    position:absolute;
+    bottom:10%;
+    font-size: 14px;
+    font-family: 'Inter';
+    font-weight: 600;
+
+    width: 200px;
+    height: 50px;
+    background-color: white;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    gap:5px;
+  }
+  #google{
+    left: 10%;
+    
+  }
+  #facebook{
+    right:10%;
+  }
+
+  
+  /* 2xl */
+  @media (max-width: 1536px) {
+    .container {
+      max-width: 1280px;
+    }
+
+    #pink-left{
+        width: 500px;
+      }
+  }
+  
+  /* xl */
+  @media (max-width: 1280px) {
+    .container {
+      max-width: 1024px;
+    }
+
+    #sign-in-box{
+      right:0%;
+      
+    }
+  }
+  
+  /* lg */
+  @media (max-width: 1024px) {
+    .container {
+      max-width: 768px;
+    }
+
+    #pink-left{
+        display:none;
+      }
+
+      
+  #sign-in-box{
+   position:relative;
+   left:50%;
+   transform: translate(-50%,-50%);
+
+  }
+
+  }
+  
+  /* md */
+  @media (max-width: 768px) {
+    .container {
+      max-width: 640px;
+    }
+  }
+  
+  /* sm */
+  @media (max-width: 640px) {
+    .container {
+      max-width: 475px;
+    }
+
+    #sign-in-box{
+      width: 375px;
+      height: 400px;
+    }
+  
+    #sign-in-box-1{
+      font-size: 24px;
+    }
+  
+      .sign-in-input-box{
+          position:absolute;
+          width: 372px;
+          height: 50px;
+        }
+  
+    .sign-in-button{
+      width: 372px;
+      height: 50px;
+    }
+  
+    .spacer{
+      position:absolute;
+      top:75%;
+  
+      height: 1px;
+      width: 372px;
+      background-color: lightgrey;
+    }
+  
+    #google{
+      left: 50%;
+      transform: translateX(-50%);
+      
+    }
+    #facebook{
+      bottom:-5%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  
+  /* xs */
+  @media (max-width: 475px) {
+    .container {
+      width: 100%;
+    }
+  }

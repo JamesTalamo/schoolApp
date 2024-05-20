@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDENT-USER DASHBOARD</title>
+    <link rel="stylesheet" href="../../studentDash-dash/studentDash-dash.css">
+</head>
+
+<body>
+
+    <div class="template">
+        <!--1280px will pop up-->
+
+        <div id="burger-menu" onclick="
+        if(document.querySelector('#purple-nav').style.display==='none'){
+            document.querySelector('#purple-nav').style.display='block'
+        }else{
+            document.querySelector('#purple-nav').style.display='none'
+        }"></div>
+
+        <div id="purple-nav">
+
+            <div id="x-button" onclick="if(document.querySelector('#purple-nav').style.display==='none'){
+                document.querySelector('#purple-nav').style.display='block'
+            }else{
+                document.querySelector('#purple-nav').style.display='none'
+            }"></div>
+
+            <div id="name-holder"><!--DYNAMIC--></div>
+            <div id="name-roles"><!--DYNAMIC--></div>
+
+            <div id="navigation">
+                <ul>
+                    <li tabindex="0"
+                        onclick="window.location.href='http://localhost:4000/verifiedRoutes/studentDash/dash'"><img
+                            src="/assetsFrontEnd/navIcon1.svg" class="navIcons">DASHBOARD</li>
+
+                    <li tabindex="0"
+                        onclick="window.location.href='http://localhost:4000/verifiedRoutes/studentDash/user'"><img
+                            src="/assetsFrontEnd/navIcon2.svg" class="navIcons">USER</li>
+
+                </ul>
+            </div>
+
+            <div id="logoutButton">LOGOUT</div>
+        </div>
+        <div class="container">
+
+            <div id="info-box">
+                <div id="questionCon">
+
+                    <!--DYNAMIC-->
+
+                </div>
+                <div id="buttonsCon">
+                    <button class="buttons" id="prev">PREVIOUS</button>
+                    <button class="buttons" id="submit">SUBMIT ANSWER</button> 
+                    <button class="buttons" id="next">NEXT</button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+<script src="../../studentDash-dash/studentDash-dash.js"></script>
+
+</html>
+<!--
+<div class="items-questions" id="question"><--DYNAMIC </div>
+
+<div class="items-questions">
+    <input type="radio" class="checkBoxClass" id="choice1" name="answer">
+    <label id="choice1" for="choice1"><--DYNAMIC </label>
+</div>
+
+<div class="items-questions">
+    <input type="radio" class="checkBoxClass" id="choice2" name="answer">
+    <label id="choice2" for="choice2"><--DYNAMIC </label>
+</div>
+
+<div class="items-questions">
+    <input type="radio" class="checkBoxClass" id="choice3" name="answer">
+    <label id="choice3" for="choice3"><--DYNAMIC </label>
+</div>
+
+-->

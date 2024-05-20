@@ -1,0 +1,34 @@
+[
+    {
+        "username": "yui",
+        "created": "20240201",
+        "roles": {
+            "role": "STUDENT"
+        },
+        "pwd": "$2b$10$RNmr8IUqTMtwKbjCKGYlbOUKS3po6XcnN4wUpjuIe5JoU0RmBB79q",
+        "userScore": 0,
+        "accessToken": "",
+        "refreshToken": ""
+    },
+    {
+        "username": "jamestalamo4",
+        "created": "20240126",
+        "roles": {
+            "role": "TEACHER"
+        },
+        "pwd": "$2b$10$sT8LvSDu30MbFh696xwxNe55Tjva/cMNzK0iNbALyeb73nz7zl6Dq",
+        "accessToken": "",
+        "refreshToken": ""
+    },
+    {
+        "username": "james",
+        "created": "20240201",
+        "roles": {
+            "role": "STUDENT"
+        },
+        "pwd": "$2b$10$NMx/pH6c7Qyyib.6io6r8OGnTvlOe/970SyCgjznAzf9HQMH.uT8O",
+        "userScore": 0,
+        "accessToken": "",
+        "refreshToken": ""
+    }
+]
