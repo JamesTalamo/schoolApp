@@ -11,16 +11,6 @@
         "refreshToken": ""
     },
     {
-        "username": "jamestalamo4",
-        "created": "20240126",
-        "roles": {
-            "role": "TEACHER"
-        },
-        "pwd": "$2b$10$sT8LvSDu30MbFh696xwxNe55Tjva/cMNzK0iNbALyeb73nz7zl6Dq",
-        "accessToken": "",
-        "refreshToken": ""
-    },
-    {
         "username": "james",
         "created": "20240201",
         "roles": {
@@ -28,6 +18,38 @@
         },
         "pwd": "$2b$10$NMx/pH6c7Qyyib.6io6r8OGnTvlOe/970SyCgjznAzf9HQMH.uT8O",
         "userScore": 0,
+        "accessToken": "",
+        "refreshToken": ""
+    },
+    {
+        "username": "james423",
+        "created": "20240521",
+        "roles": {
+            "role": "STUDENT"
+        },
+        "pwd": "$2b$10$emFWnmvY4CkLrra9hgGwI.RFwnzq6RfP7.bvYq2E5GzNG1PYbfj32",
+        "userScore": 0,
+        "accessToken": "",
+        "refreshToken": ""
+    },
+    {
+        "username": "zer",
+        "created": "20240521",
+        "roles": {
+            "role": "STUDENT"
+        },
+        "pwd": "$2b$10$U38EoUJ83PTgz7Nzm9cBfOJSmkhJy2Ntc4ZwjU7U4YPSvl.agOxga",
+        "userScore": 0,
+        "accessToken": "",
+        "refreshToken": ""
+    },
+    {
+        "username": "jamestalamo4",
+        "created": "20240126",
+        "roles": {
+            "role": "TEACHER"
+        },
+        "pwd": "$2b$10$sT8LvSDu30MbFh696xwxNe55Tjva/cMNzK0iNbALyeb73nz7zl6Dq",
         "accessToken": "",
         "refreshToken": ""
     }

@@ -70,19 +70,19 @@ button.addEventListener('click', (e) => {
 
                 console.log(userFound)
 
-                // if(userFound.roles.role === 'STUDENT'){
-                //     setTimeout(() => {
-                //         window.location.href = 'http://localhost:4000/verifiedRoutes/studentDash';
-                //     }, 500);
-                // }
+                if(userFound.roles.role === 'STUDENT'){
+                    setTimeout(() => {
+                        window.location.href = 'http://localhost:4000/verifiedRoutes/studentDash';
+                    }, 500);
+                }
 
-                // if(userFound.roles.role === 'TEACHER'){
+                if(userFound.roles.role === 'TEACHER'){
 
-                //     setTimeout(() => {
-                //         window.location.href = 'http://localhost:4000/verifiedRoutes/teacherDash';
-                //     }, 500);
+                    setTimeout(() => {
+                        window.location.href = 'http://localhost:4000/verifiedRoutes/teacherDash';
+                    }, 500);
                    
-                // }
+                }
 
                 
 

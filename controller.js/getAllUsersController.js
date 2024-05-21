@@ -1,10 +1,14 @@
-const User = require('../database/Users')
+// const User = require('../database/Users')
+
+const usersDB ={
+    users : require('../database/users.json'),
+    setUsers : function (data) {this.users = data} 
+}
+
 
 const getUsers = async (req ,res) => {
     try{
-
-        const users = await User.find()
-        res.send(users)
+        res.send(usersDB.users)
 
     }catch(err){
         console.error(err)

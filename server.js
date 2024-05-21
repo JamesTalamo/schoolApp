@@ -3,7 +3,7 @@ require('dotenv').config()
 const connectDB = require('./config/dbConn')
 const mongoose = require('mongoose')
 
-connectDB()//
+// connectDB()//
 
 const cors = require('cors')
 const express = require('express');
@@ -35,10 +35,6 @@ app.use(require('./middleware/verifyJWT'))
 app.use('/verifiedRoutes', require('./authRoutes/dashRoutes'))
 
 
-mongoose.connection.once('open', () => {
-    console.log('Connected to mongoDB')
 
-    const PORT = process.env.PORT || 4000;
-    app.listen(PORT, () => console.log(`Listening to port : ${PORT}`))
-})
-    
+const PORT = process.env.PORT || 4000;
+app.listen(PORT, () => console.log(`Listening to port : ${PORT}`))

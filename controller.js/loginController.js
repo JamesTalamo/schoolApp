@@ -1,7 +1,7 @@
-// const fsPromises = require('fs').promises
-// const path = require('path')
+const fsPromises = require('fs').promises
+const path = require('path')
 
-const Users = require('../database/Users')
+// const Users = require('../database/Users')
 
 const bcrypt = require('bcrypt')
 
@@ -17,11 +17,11 @@ const loginHandler = async (req, res) => {
     const { user, pwd } = req.body
     if (!user || !pwd) return res.status(400).json({ "error": "user and pwd are required!" })
 
-    // const userFound = usersDB.users.find(person => person.username === user)
-    // if (!userFound) return res.status(400).json({ "error": "username does not exist!" })
-
-    const userFound = await Users.findOne({username : user}).exec();
+    const userFound = usersDB.users.find(person => person.username === user)
     if (!userFound) return res.status(400).json({ "error": "username does not exist!" })
+
+    // const userFound = await Users.findOne({username : user}).exec();
+    // if (!userFound) return res.status(400).json({ "error": "username does not exist!" })
 
     try {
         const match = await bcrypt.compare(pwd, userFound.pwd)
@@ -50,19 +50,19 @@ const loginHandler = async (req, res) => {
                 { expiresIn: '1d' }
             )
 
-            // const otherUsers = usersDB.users.filter(person => person.username !== userFound.username)
-            // const currentUser = { ...userFound, accessToken, refreshToken }
-            // usersDB.setUsers([...otherUsers, currentUser])
+            const otherUsers = usersDB.users.filter(person => person.username !== userFound.username)
+            const currentUser = { ...userFound, accessToken, refreshToken }
+            usersDB.setUsers([...otherUsers, currentUser])
 
-            // await fsPromises.writeFile(path.join(__dirname, '..', 'database', 'users.json'), JSON.stringify(usersDB.users))
+            await fsPromises.writeFile(path.join(__dirname, '..', 'database', 'users.json'), JSON.stringify(usersDB.users))
             
             
 
-            userFound.accessToken = accessToken
-            userFound.refreshToken = refreshToken
+            // userFound.accessToken = accessToken
+            // userFound.refreshToken = refreshToken
             
-            const result =await userFound.save()
-            console.log(result)
+            // const result =await userFound.save()
+            // console.log(result)
 
             res.cookie('jwtAccessToken', accessToken, { httpOnly: true, maxAge: 6 * 24 * 24 * 1000 })
             res.cookie('jwtRefreshToken', refreshToken, { httpOnly: true, maxAge: 6 * 24 * 24 * 1000 })
